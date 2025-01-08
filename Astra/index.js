@@ -186,7 +186,8 @@ app.post("/run-flow", async (req, res) => {
       const output = firstComponentOutputs.outputs.message;
       console.log("from heere");
 
-      const prompt = output?.message.text;
+      const prompt = output?.message.text + `
+       use tailwind for css syling the component`;
       console.log("prompt", prompt);
 
       const result = await model.generateContent(prompt);
