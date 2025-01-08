@@ -1,5 +1,5 @@
 export async function submitPrompt(inputValue: string) {
-  const response = await fetch("http://localhost:3000/run-flow", {
+  const response = await fetch("https://social-anlysis.vercel.app/run-flow", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
