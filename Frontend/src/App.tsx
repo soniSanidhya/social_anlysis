@@ -10,6 +10,8 @@ export default function App() {
   const handleSubmit = async (input: string) => {
     try {
       const result = await submitPrompt(input);
+      console.log("result", result);
+      
       setResponse(result);
     } catch (error) {
       setResponse(`<div class="text-red-400">Error: ${error instanceof Error ? error.message : 'An error occurred'}</div>`);
