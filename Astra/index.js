@@ -203,6 +203,10 @@ app.post("/run-flow", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Social Media Analysis");
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on PORT ${process.env.PORT}`);
 });
